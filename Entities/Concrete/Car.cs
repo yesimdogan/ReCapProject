@@ -10,7 +10,7 @@ namespace Entities.Concrete
         public int BrandId { get; set; }
         public int ColorId { get; set; }
         public short ModelYear { get; set; }
-        public int DailyPrice { get; set; }
+        public decimal DailyPrice { get; set; }
         public string Description { get; set; }
 
     }
