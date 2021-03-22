@@ -18,7 +18,7 @@ namespace ConsoleIU
                 ColorId = 7,
                 BrandId = 7,
                 ModelYear = 2019,
-                DailyPrice = 42,
+                DailyPrice = 4800,
                 Description = "........."
             });
 
