@@ -11,7 +11,7 @@ CREATE TABLE [dbo].[Cars] (
     [BrandId]     INT      NOT NULL,
     [ColorId]     INT      NOT NULL,
     [ModelYear]   SMALLINT NULL,
-    [DailyPrice]  MONEY    NOT NULL,
+    [DailyPrice]  DECIMAL    NOT NULL,
     [Description] TEXT     NULL,
     PRIMARY KEY CLUSTERED ([CarId] ASC)
 );
