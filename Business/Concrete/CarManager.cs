@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -27,7 +28,7 @@ namespace Business.Concrete
             {
                 Console.WriteLine("Add Failed .The daily price of the car must be greater than 0.");
             }
-
+         
         }
 
         public void Delete(Car car)
@@ -45,6 +46,11 @@ namespace Business.Concrete
             return _carDal.GetAll(p => p.DailyPrice >= min && p.DailyPrice <= max);
         }
 
+        public List<CarDetailDto> GetCarDetails()
+        {
+            return _carDal.GetCarDetails();
+        }
+
         public List<Car> GetCarsByBrandId(int id)
         {
             return _carDal.GetAll(p => p.BrandId == id);
@@ -60,7 +66,6 @@ namespace Business.Concrete
         {
             _carDal.Update(car);
         }
-      
 
     }
 }
