@@ -15,22 +15,25 @@ namespace ConsoleIU
             //CarTest();
             //BrandTest();
             //ColorTest();
+            //CarDetailsTest();
 
+            Console.ReadKey();
+        }
 
+        private static void CarDetailsTest()
+        {
             CarManager carManager = new CarManager(new EfCarDal());
-            foreach (var car in carManager.GetCarDetails())
+
+            foreach (var car in carManager.GetCarDetails().Data)
             {
                 Console.WriteLine("Car's Details :" + "\n" + car.BrandName + "\n" + car.ColorName + "\n" + car.DailyPrice + "\n" + car.CarName + "\n");
             }
-          
-
-            Console.ReadKey();
         }
 
         private static void ColorTest()
         {
             ColorManager colorManager = new ColorManager(new EfColorDal());
-            Console.WriteLine(colorManager.GetColorId(4).ColorName);
+            Console.WriteLine(colorManager.GetColorId(4).Data.ColorName);
 
             colorManager.Add(new Color { ColorName = "Brown" });
             colorManager.Delete(new Color { ColorId = 3 });
@@ -38,27 +41,40 @@ namespace ConsoleIU
 
 
 
-            foreach (var color in colorManager.GetAll())
-            {
-                Console.WriteLine("Color Id :" + color.ColorId + "---->" + "Color Name :" + color.ColorName);
+            foreach (var color in colorManager.GetAll().Data)
+            {           
+                Console.WriteLine("Color Id :" + color.ColorId + "/" + " Color Name :" + color.ColorName);
             }
-        }
 
+        }
 
         private static void BrandTest()
         {
             BrandManager brandManager = new BrandManager(new EfBrandDal());
-            Console.WriteLine(brandManager.GetBrandId(2).BrandName);           
+            Console.WriteLine(brandManager.GetBrandId(2).Data.BrandName);
 
             brandManager.Add(new Brand { BrandName = "Audi" });
             brandManager.Delete(new Brand { BrandId = 3 });
             brandManager.Update(new Brand { BrandId = 2, BrandName = "Renault" });
 
 
-            foreach (var brand in brandManager.GetAll())
+            foreach (var brand in brandManager.GetAll().Data)
             {
                 Console.WriteLine("Brand Id :" + brand.BrandId + "---->" + "Brand Name :" + brand.BrandName);
             }
+
+
+            var result = brandManager.Add(new Brand { BrandName = "X"});
+            if(result.Success == true)
+            {
+                Console.WriteLine(result.Message);
+            }
+            else
+            {
+                Console.WriteLine(result.Message);
+            }
+          
+
         }
 
 
@@ -66,7 +82,7 @@ namespace ConsoleIU
         {
             CarManager carManager = new CarManager(new EfCarDal());
 
-            carManager.Add(new Car
+            var add = carManager.Add(new Car
             {
                 ColorId = 7,
                 BrandId = 7,
@@ -75,32 +91,38 @@ namespace ConsoleIU
                 Description = "........."
             });
 
-            carManager.Delete(new Car { CarId = 2 });
-            carManager.Update(new Car { CarId = 3, BrandId = 4, ColorId = 5, ModelYear = 2018, DailyPrice = 1300, Description = "...." });
+            Console.WriteLine(add.Message);
+
+            var delete = carManager.Delete(new Car { CarId = 2 });
+            Console.WriteLine(delete.Message);
+            
+            var update = carManager.Update(new Car { CarId = 3, BrandId = 4, ColorId = 5, ModelYear = 2018, DailyPrice = 1300, Description = "...." });
+            Console.WriteLine(update.Message);
 
 
-            foreach (var car in carManager.GetAll())
+            foreach (var car in carManager.GetAll().Data)
             {
                 Console.WriteLine("Car Id:" + car.CarId + "\nBrand Id :" + car.BrandId + "\nColor Id :" + car.ColorId +
                                   "\nCar Daily Price :" + car.DailyPrice + "\nDescription :" + car.Description + "\n**********");
             }
 
 
-            foreach (var car in carManager.GetCarsByBrandId(5))
+            foreach (var car in carManager.GetCarsByBrandId(5).Data)
             {
                 Console.WriteLine(car.DailyPrice);
             }
 
 
-            foreach (var car in carManager.GetCarsByColorId(3))
+            foreach (var car in carManager.GetCarsByColorId(3).Data)
             {
                 Console.WriteLine("Car Id :" + car.CarId + " --> " + "Brand Id:" + car.BrandId);
             }
 
-            foreach (var car in carManager.GetByDailyPrice(1000, 8000))
+            foreach (var car in carManager.GetByDailyPrice(1000, 8000).Data)
             {
                 Console.WriteLine("Car Id :" + car.CarId + " --> " + "Daily Price :" + car.DailyPrice);
             }
+
         }
     }
 }
