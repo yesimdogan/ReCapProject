@@ -74,7 +74,6 @@ namespace ConsoleIU
                 Console.WriteLine(result.Message);
             }
           
-
         }
 
 
