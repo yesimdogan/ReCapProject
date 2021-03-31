@@ -86,7 +86,7 @@ CarRental projenizde;
 
 7- Arabayı kiralama imkanını kodlayınız. Rental-->Add
 
-8- Arabanın kiralanabilmesi için arabanın teslim edilmesi gerekmektedir.
+Arabanın kiralanabilmesi için arabanın teslim edilmesi gerekmektedir.
 
 
 
