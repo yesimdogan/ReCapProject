@@ -16,8 +16,29 @@ namespace ConsoleIU
             //BrandTest();
             //ColorTest();
             //CarDetailsTest();
+            //CustomerTest();
 
             Console.ReadKey();
+        }
+
+        private static void CustomerTest()
+        {
+            CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+
+            Customer customer1 = new Customer();
+            customer1.UserId = 1;
+            customer1.CompanyName = "XY Company";
+            customerManager.Add(customer1);
+
+            Customer customer2 = new Customer();
+            customer2.UserId = 2;
+            customer2.CompanyName = "AB Company";
+            customerManager.Add(customer2);
+
+            foreach (var customer in customerManager.GetAll().Data)
+            {
+                Console.WriteLine(customer.CompanyName);
+            }
         }
 
         private static void CarDetailsTest()

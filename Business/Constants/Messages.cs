@@ -30,6 +30,22 @@ namespace Business.Constants
         public static string ColorsListed = "The colors have been listed.";
         public static string GetColorId = "Brought in with Color Id.";
 
+        public static string CustomerAdded = "The customer has been added.";
+        public static string CustomerDeleted = "The customer has been deleted.";
+        public static string CustomerUpdated = "The customer has been updated.";
+        public static string CustomersListed = "The customers have been listed.";
+       
 
+        public static string UserAdded = "The user has been added.";
+        public static string UserDeleted = "The user has been deleted.";
+        public static string UserUpdated = "The user has been updated.";
+        public static string UserListed = "The users have been listed.";
+      
+
+        public static string RentalAdded = "Rental information has been added.";
+        public static string RentalDeleted = "Rental information has been deleted.";
+        public static string RentalUpdated = "Rental information has been updated.";
+        public static string RentalListed = "Rental information have been listed.";
+        public static string RentalInvalid = "The add failed because the car wasn't delivered.";
     }
 }
