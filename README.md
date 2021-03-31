@@ -67,6 +67,26 @@ Daha önce geliştirdiğiniz tüm Business sınıflarını bu yapıya göre refa
 
 ------------
 
+- ÖDEV 5 - 
+
+CarRental projenizde;
+
+1- Kullanıcılar tablosu oluşturunuz. Users-->Id,FirstName,LastName,Email,Password
+
+2- Müşteriler tablosu oluşturunuz. Customers-->UserId,CompanyName
+
+*****Kullanıcılar ve müşteriler ilişkilidir.
+
+3- Arabanın kiralanma bilgisini tutan tablo oluşturunuz. Rentals-->Id, CarId, CustomerId, RentDate(Kiralama Tarihi), ReturnDate(Teslim Tarihi). Araba teslim edilmemişse ReturnDate null'dır.
+4- Projenizde bu entity'leri oluşturunuz.
+
+5- CRUD operasyonlarını yazınız.
+
+6- Yeni müşteriler ekleyiniz.
+
+7- Arabayı kiralama imkanını kodlayınız. Rental-->Add
+
+8- Arabanın kiralanabilmesi için arabanın teslim edilmesi gerekmektedir.
 
 
 
