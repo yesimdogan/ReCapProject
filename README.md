@@ -88,8 +88,18 @@ CarRental projenizde;
 
 Arabanın kiralanabilmesi için arabanın teslim edilmesi gerekmektedir.
 
+------------
 
+- ÖDEV 6 - 
 
+CarRental projenizde;
+
+WebAPI katmanını kurunuz.
+Business katmanındaki tüm servislerin Api karşılığını yazınız.
+Postman'de test ediniz.
+Kodlarınızı paylaşınız.
+
+------------
 
 
 
