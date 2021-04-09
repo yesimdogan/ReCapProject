@@ -101,6 +101,15 @@ Kodlarınızı paylaşınız.
 
 ------------
 
+- ÖDEV 7 - 
+
+1- Car Rental Projenize Autofac desteği ekleyiniz. 
+
+2- Car Rental Projenize FluentValidation desteği ekleyiniz.
+
+3- Car Rental Projenize AOP desteği ekleyiniz. ValidationAspect ekleyiniz.
+
+
 
 
 
