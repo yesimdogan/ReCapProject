@@ -123,7 +123,7 @@ Bir arabanın en fazla 5 resmi olabilir.
 Resmin eklendiği tarih sistem tarafından atanacaktır.
 Bir arabaya ait resimleri listeleme imkanı oluşturunuz. (Liste)
 Eğer bir arabaya ait resim yoksa, default bir resim gösteriniz. Bu resim şirket logonuz olabilir. (Tek elemanlı liste)
-Github linkinizi paylaşınız.
+
 
 
 
