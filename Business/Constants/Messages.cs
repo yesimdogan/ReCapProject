@@ -47,5 +47,13 @@ namespace Business.Constants
         public static string RentalUpdated = "Rental information has been updated.";
         public static string RentalListed = "Rental information have been listed.";
         public static string RentalInvalid = "The add failed because the car wasn't delivered.";
+
+
+        public static string CarImageAdded = "The image has been added.";
+        public static string CarImageDeleted = "The image has been deleted.";
+        public static string CarImageUpdated = "The image has been updated.";
+        public static string CarImageListed = "The images has been listed.";
+        public static string GetByCarId = "The image was brought in with the car Id";
+        public static string ImageLimit = "The image limit is 5."; 
     }
 }

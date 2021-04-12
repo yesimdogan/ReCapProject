@@ -19,11 +19,11 @@ namespace DataAccess.Concrete
             _cars = new List<Car>
 
             {
-                new Car{CarId = 1, BrandId = 1, ColorId=2, ModelYear=2010, DailyPrice=55000, Description=".."},
-                new Car{CarId = 2, BrandId = 2, ColorId=3, ModelYear=2012, DailyPrice=60000, Description="..."},
-                new Car{CarId = 3, BrandId = 4, ColorId=4, ModelYear=2016, DailyPrice=70000, Description="...."},
-                new Car{CarId = 4, BrandId = 3, ColorId=5, ModelYear=2019, DailyPrice=85000, Description="....."},
-                new Car{CarId = 5, BrandId = 5, ColorId=1, ModelYear=2020, DailyPrice=90000, Description="......"}
+                new Car{Id = 1, BrandId = 1, ColorId=2, ModelYear=2010, DailyPrice=55000, Description=".."},
+                new Car{Id = 2, BrandId = 2, ColorId=3, ModelYear=2012, DailyPrice=60000, Description="..."},
+                new Car{Id = 3, BrandId = 4, ColorId=4, ModelYear=2016, DailyPrice=70000, Description="...."},
+                new Car{Id = 4, BrandId = 3, ColorId=5, ModelYear=2019, DailyPrice=85000, Description="....."},
+                new Car{Id = 5, BrandId = 5, ColorId=1, ModelYear=2020, DailyPrice=90000, Description="......"}
             };
 
 
@@ -36,7 +36,7 @@ namespace DataAccess.Concrete
 
         public void Delete(Car car)
         {
-            Car carToDelete = _cars.SingleOrDefault(c=>c.CarId == car.CarId);
+            Car carToDelete = _cars.SingleOrDefault(c=>c.Id == car.Id);
             _cars.Remove(carToDelete);
         }
 
@@ -57,7 +57,7 @@ namespace DataAccess.Concrete
 
         public List<Car> GetById(int Id)
         {
-            return _cars.Where(c => c.CarId == Id).ToList();
+            return _cars.Where(c => c.Id == Id).ToList();
         }
 
         public List<CarDetailDto> GetCarDetails()
@@ -67,7 +67,7 @@ namespace DataAccess.Concrete
 
         public void Update(Car car)
         {
-            Car carToUpdate = _cars.SingleOrDefault(c => c.CarId == car.CarId);
+            Car carToUpdate = _cars.SingleOrDefault(c => c.Id == car.Id);
             carToUpdate.ColorId = car.ColorId;
             carToUpdate.BrandId = car.BrandId;
             carToUpdate.DailyPrice = car.DailyPrice;

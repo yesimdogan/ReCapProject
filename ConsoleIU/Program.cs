@@ -113,16 +113,16 @@ namespace ConsoleIU
 
             Console.WriteLine(add.Message);
 
-            var delete = carManager.Delete(new Car { CarId = 2 });
+            var delete = carManager.Delete(new Car { Id = 2 });
             Console.WriteLine(delete.Message);
             
-            var update = carManager.Update(new Car { CarId = 3, BrandId = 4, ColorId = 5, ModelYear = 2018, DailyPrice = 1300, Description = "...." });
+            var update = carManager.Update(new Car { Id = 3, BrandId = 4, ColorId = 5, ModelYear = 2018, DailyPrice = 1300, Description = "...." });
             Console.WriteLine(update.Message);
 
 
             foreach (var car in carManager.GetAll().Data)
             {
-                Console.WriteLine("Car Id:" + car.CarId + "\nBrand Id :" + car.BrandId + "\nColor Id :" + car.ColorId +
+                Console.WriteLine("Car Id:" + car.Id + "\nBrand Id :" + car.BrandId + "\nColor Id :" + car.ColorId +
                                   "\nCar Daily Price :" + car.DailyPrice + "\nDescription :" + car.Description + "\n**********");
             }
 
@@ -135,12 +135,12 @@ namespace ConsoleIU
 
             foreach (var car in carManager.GetCarsByColorId(3).Data)
             {
-                Console.WriteLine("Car Id :" + car.CarId + " --> " + "Brand Id:" + car.BrandId);
+                Console.WriteLine("Car Id :" + car.Id + " --> " + "Brand Id:" + car.BrandId);
             }
 
             foreach (var car in carManager.GetByDailyPrice(1000, 8000).Data)
             {
-                Console.WriteLine("Car Id :" + car.CarId + " --> " + "Daily Price :" + car.DailyPrice);
+                Console.WriteLine("Car Id :" + car.Id + " --> " + "Daily Price :" + car.DailyPrice);
             }
 
         }
