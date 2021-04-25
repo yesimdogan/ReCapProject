@@ -127,6 +127,7 @@ Eğer bir arabaya ait resim yoksa, default bir resim gösteriniz. Bu resim şirk
 -----------
 
 -ÖDEV 9 - 
+
 RentACar projenize JWT entegrasyonu yapınız.
 
 
