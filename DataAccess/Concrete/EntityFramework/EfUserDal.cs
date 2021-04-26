@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using DataAccess.Concrete.EntityFramework;
 using Core.Entities.Concrete;
-using Entities.Concrete;
+
 
 namespace DataAccess.Concrete.EntityFramework
 {
