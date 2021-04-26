@@ -10,7 +10,7 @@ namespace Core.Utilities.Security.Hashing
         {
             using (var hmac = new System.Security.Cryptography.HMACSHA512())
             {
-                passwordSalt = hmac.Key;
+                passwordSalt = hmac.Key; 
                 passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
             }
            

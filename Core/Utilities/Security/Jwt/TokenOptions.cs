@@ -11,5 +11,5 @@ namespace Core.Utilities.Security.Jwt
         public int AccessTokenExpiration { get; set; }
         public string SecurityKey { get; set; }
 
-    }
+    } 
 }

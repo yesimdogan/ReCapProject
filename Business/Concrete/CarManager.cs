@@ -22,7 +22,7 @@ namespace Business.Concrete
         public CarManager(ICarDal carDal)
         {
             _carDal = carDal;
-        }
+        } 
 
         [SecuredOperation("car.add")]
         [ValidationAspect(typeof(CarValidator))]        

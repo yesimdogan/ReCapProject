@@ -23,7 +23,7 @@ namespace WebAPI.Controllers
         [HttpPost("login")]
 
         public ActionResult Login(UserForLoginDto userForLoginDto)
-        {
+        { 
             var userToLogin = _authService.Login(userForLoginDto);
             if (!userToLogin.Success)
             {
