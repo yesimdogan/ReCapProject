@@ -130,4 +130,10 @@ Eğer bir arabaya ait resim yoksa, default bir resim gösteriniz. Bu resim şirk
 
 RentACar projenize JWT entegrasyonu yapınız.
 
+-----------
+
+- ÖDEV 10 - 
+
+Cache, Transaction ve Performance aspectlerini ekleyiniz.
+
 
